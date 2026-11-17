@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "ms-dotnettools.csdevkit",
+    "Angular.ng-template",
+    "ms-azure-devops.azure-pipelines"
+  ]
+}

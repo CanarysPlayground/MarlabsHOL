@@ -1,0 +1,61 @@
+// Design tokens exported from the Figma file "Leave Manager UI".
+// Keep names in sync with Figma variables; components use the CSS custom properties below,
+// never raw hex values.
+
+:root {
+  // Colour / brand
+  --color-primary: #1F5EFF;
+  --color-primary-hover: #1848C7;
+  --color-primary-fg: #FFFFFF;
+
+  // Colour / surface
+  --color-bg: #F6F8FB;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #EEF2F7;
+  --color-border: #D5DCE6;
+
+  // Colour / text
+  --color-text: #15213A;
+  --color-text-muted: #5B6B85;
+
+  // Colour / feedback
+  --color-danger: #C62828;
+  --color-danger-bg: #FDECEC;
+  --color-warning: #8A5A00;
+  --color-warning-bg: #FFF4D6;
+
+  // Status chip variants (Figma component "Status chip")
+  --status-pending-fg: #8A5A00;
+  --status-pending-bg: #FFF4D6;
+  --status-pending-border: #F2D58A;
+  --status-approved-fg: #146C2E;
+  --status-approved-bg: #E3F5E8;
+  --status-approved-border: #9ED9B0;
+  --status-rejected-fg: #B3261E;
+  --status-rejected-bg: #FDECEC;
+  --status-rejected-border: #F3B3AE;
+
+  // Spacing (4-pt grid)
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  // Radius
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-pill: 999px;
+
+  // Typography
+  --font-family: "Segoe UI", Inter, system-ui, -apple-system, sans-serif;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+
+  // Layout
+  --content-max-width: 1040px;
+  --breakpoint-tablet: 768px;
+}

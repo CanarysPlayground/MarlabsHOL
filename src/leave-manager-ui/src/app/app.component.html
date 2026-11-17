@@ -1,0 +1,29 @@
+<header class="topbar">
+  <div class="brand">Leave Manager</div>
+  <nav aria-label="Main">
+    <a routerLink="/my-requests" routerLinkActive="active">My Requests</a>
+    <a routerLink="/new-request" routerLinkActive="active">New Request</a>
+    <a routerLink="/approval-queue" routerLinkActive="active">Approval Queue</a>
+    <a routerLink="/team-calendar" routerLinkActive="active">Team Calendar</a>
+  </nav>
+  <label class="user">
+    <span class="muted">Signed in as</span>
+    <select (change)="onUserChange($event)" [value]="user.email()" aria-label="Switch demo user">
+      @for (e of employees(); track e.id) {
+        <option [value]="e.email" [selected]="e.email === user.email()">{{ e.name }} ({{ e.role }})</option>
+      } @empty {
+        <option [value]="user.email()">{{ user.email() }}</option>
+      }
+    </select>
+  </label>
+</header>
+
+@if (apiDown()) {
+  <div class="banner banner--warning api-down" role="alert">
+    Cannot reach the API at https://localhost:7043. Run <code>dotnet run</code> in <code>src/LeaveManager.Api</code> and trust the dev certificate (<code>dotnet dev-certs https --trust</code>).
+  </div>
+}
+
+<main class="content">
+  <router-outlet />
+</main>

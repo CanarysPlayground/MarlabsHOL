@@ -1,0 +1,36 @@
+{
+  "inputs": [
+    {
+      "id": "ado-pat",
+      "type": "promptString",
+      "description": "Azure DevOps Personal Access Token (Work Items: Read & Write, Code: Read, Build: Read & Execute)",
+      "password": true
+    },
+    {
+      "id": "figma-token",
+      "type": "promptString",
+      "description": "Figma personal access token (File content: read)",
+      "password": true
+    }
+  ],
+  "servers": {
+    "azure-devops": {
+      "disabled": true,
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@azure-devops/mcp", "YOUR-ADO-ORG-NAME"],
+      "env": {
+        "AZURE_DEVOPS_EXT_PAT": "${input:ado-pat}"
+      }
+    },
+    "figma": {
+      "disabled": true,
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "figma-developer-mcp", "--stdio"],
+      "env": {
+        "FIGMA_API_KEY": "${input:figma-token}"
+      }
+    }
+  }
+}

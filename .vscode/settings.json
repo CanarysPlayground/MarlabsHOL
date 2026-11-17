@@ -1,0 +1,5 @@
+{
+  "chat.agent.enabled": true,
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "dotnet.defaultSolution": "LeaveManager.sln"
+}
